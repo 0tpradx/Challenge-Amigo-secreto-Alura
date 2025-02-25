@@ -26,3 +26,24 @@ function adicionarAmigo() {
       }
   } 
   
+  listaAmigos.push(amigo);
+  for(let i = 0;i<listaAmigos.length;i++){
+      exibirAmigos('#listaAmigos',`${listaAmigos}`);
+      }
+      if(listaAmigos.length>1){
+        document.getElementById('sortearAmigo').disabled = false;
+      }
+
+  limparCampo();
+  }
+
+
+function sortearAmigo(){
+    let amigoSorteado = listaAmigos[Math.floor(Math.random()* listaAmigos.length)];
+    //testes
+    //console.log(amigoSorteado);
+    //console.log(listaAmigos);
+    exibeSorteado('#resultado',`O amigo sorteado é: ${amigoSorteado} `);
+      document.getElementById('sortearAmigo').setAttribute('disabled', true);
+  
+  
