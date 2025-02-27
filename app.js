@@ -38,12 +38,9 @@ function adicionarAmigo() {
   }
 
 
-function sortearAmigo(){
-    let amigoSorteado = listaAmigos[Math.floor(Math.random()* listaAmigos.length)];
-    //testes
-    //console.log(amigoSorteado);
-    //console.log(listaAmigos);
-    exibeSorteado('#resultado',`O amigo sorteado é: ${amigoSorteado} `);
-      document.getElementById('sortearAmigo').setAttribute('disabled', true);
+function exibirAmigos() {
+    let listaHTML = document.querySelector('listaAmigos');
+    listaHTML
+    
   
   
